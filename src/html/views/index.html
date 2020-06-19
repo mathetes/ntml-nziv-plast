@@ -1,4 +1,4 @@
-<% var data = { title: "Заголовок | Проект", author: "Harrix" }; %> <%=
+<% var data = { title: "Заголовок | Проект", author: "Mathetes" }; %> <%=
 _.template(require('./../includes/header.html').default)(data) %>
 
 <!-- Page Content -->
@@ -12,21 +12,15 @@ _.template(require('./../includes/header.html').default)(data) %>
 
     <div class="col-lg-4">
       <img
-        class="img-fluid rounded mb-4 mb-lg-0"
-        src="http://placehold.it/900x400"
-        alt=""
+        class="img-fluid rounded mb-4 mb-lg-0 product__pic"
+        src="../../img/products/5liter.png"
+        alt="Ведро с ручкой"
       />
     </div>
     <!-- /.col-lg-8 -->
     <div class="col-lg-5">
-      <h1 class="font-weight-light">Business Name or Tagline</h1>
-      <p>
-        This is a template that is great for small businesses. It doesn't have
-        too much fancy flare to it, but it makes a great use of the standard
-        Bootstrap core components. Feel free to use this template for any
-        project you want!
-      </p>
-      <a class="btn btn-primary" href="#">Call to Action!</a>
+      <h2 class="font-weight-light">Характеристики изделия</h2>
+      <%= _.template(require('./../includes/table.html').default)(data) %>
     </div>
     <!-- /.col-md-4 -->
   </div>

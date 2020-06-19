@@ -47,3 +47,18 @@ body {
   margin-bottom: 30px;
   font-size: 1.5rem;
 }
+
+// Sidebar menu
+.product {
+  overflow: hidden;
+}
+.product_item {
+  list-style: none;
+}
+.product_link {
+  line-height: 2.5rem;
+  color: #001f3e;
+}
+.product__pic {
+  width: 100% !important;
+}
