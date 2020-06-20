@@ -36,6 +36,7 @@ body {
 .nav-item-link {
   text-transform: uppercase;
   margin-left: 100px;
+  width: 100%;
 }
 .logonziv {
   width: 8rem;
@@ -93,12 +94,18 @@ body {
 // Blocks
 .image__block {
   display: inline-block;
-  width: 46%;
+  width: 40%;
   float: left;
   margin-right: 33px;
 }
 .caracters__block {
   display: inline-block;
-  width: 50%;
+  width: 56%;
   flet: right;
+}
+.callme__block {
+  float: right;
+}
+table tr {
+  line-height: 0;
 }
