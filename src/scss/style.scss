@@ -68,6 +68,7 @@ body {
 .icon__block {
   margin-bottom: 50px;
   display: inline-flexbox;
+  width: 100%;
 }
 .icon__block_picture {
   max-width: 150px;
@@ -87,4 +88,17 @@ body {
 }
 .caracter__card_body {
   text-align: center;
+}
+
+// Blocks
+.image__block {
+  display: inline-block;
+  width: 46%;
+  float: left;
+  margin-right: 33px;
+}
+.caracters__block {
+  display: inline-block;
+  width: 50%;
+  flet: right;
 }
