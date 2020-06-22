@@ -4,30 +4,30 @@
 <!-- Page Content -->
 <div class="container wrapper">
   <div class="row align-items-top my-5">
-    <div class="col-lg-3">
+    <div class="col-sm-12 col-lg-3">
       <%= _.template(require('./../includes/sidebar.html').default)(data) %>
     </div>
 
-    <div class="col-lg-9">
+    <div class="col-sm-12 col-lg-9 sidebar__block">
       <div class="iconsblock">
         <%= _.template(require('./../includes/iconsblock.html').default)(data)
         %>
       </div>
       <h2 class="product__heading">Ведро с крышкой - 3 литрa</h2>
       <div class="image__block">
-        <img
-          class="img-fluid rounded mb-4 mb-lg-0 product__pic"
-          src="../../img/products/5liter.png"
-          alt="Ведро с ручкой"
-        />
+        <%= _.template(require('./../includes/slider.html').default)(data) %>
       </div>
       <div class="caracters__block">
-        <h2 class="font-weight-light">Характеристики изделия</h2>
-        <%= _.template(require('./../includes/table.html').default)(data) %>
+        <h2 class="font-weight-light caracters__heading">
+          Характеристики изделия
+        </h2>
+        <%=
+        _.template(require('./../includes/buckets/table_bucket5.html').default)(data)
+        %> <%=
+        _.template(require('./../includes/modalorder.html').default)(data) %>
       </div>
     </div>
   </div>
 </div>
 
 <%= _.template(require('./../includes/footer.html').default)(data) %>
-table_tank045.html table_tank065.html table_tank32.html
