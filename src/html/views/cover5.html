@@ -1,4 +1,4 @@
-<% var data = { title: "Ведро с крышкой - 10 литров | АО НЗИВ", author:
+<% var data = { title: "Крышка для ведра - 5 литров | АО НЗИВ", author:
 "Mathetes" }; %> <%=
 _.template(require('./../includes/header.html').default)(data) %>
 
@@ -14,7 +14,7 @@ _.template(require('./../includes/header.html').default)(data) %>
         <%= _.template(require('./../includes/iconsblock.html').default)(data)
         %>
       </div>
-      <h2 class="product__heading">Ведро с крышкой - 10 литров</h2>
+      <h2 class="product__heading">Крышка для ведра на 5 литров</h2>
       <div class="image__block">
         <%= _.template(require('./../includes/slider.html').default)(data) %>
       </div>
@@ -23,7 +23,7 @@ _.template(require('./../includes/header.html').default)(data) %>
           Характеристики изделия
         </h2>
         <%=
-        _.template(require('./../includes/buckets/table_bucket10.html').default)(data)
+        _.template(require('./../includes/covers/table_cover5.html').default)(data)
         %> <%=
         _.template(require('./../includes/modalorder.html').default)(data) %>
       </div>
