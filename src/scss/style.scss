@@ -37,6 +37,22 @@ body {
   width: 8rem;
 }
 
+.btn-danger-props {
+  width: 100%;
+}
+.card-title {
+  text-align: center;
+}
+.card-block {
+  width: 16.8rem;
+  display: inline-flex;
+  margin-bottom: 20px;
+}
+.card-block:hover {
+  cursor: pointer;
+  border: 2px solid red;
+}
+
 .product__heading {
   text-align: center;
   text-transform: uppercase;
