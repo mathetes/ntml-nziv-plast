@@ -24,6 +24,9 @@ body {
 .wrapper {
   margin-top: 120px;
 }
+.navbar__block {
+  position: relative;
+}
 
 .nav__wrapper {
   background-color: #001f3e;
@@ -32,7 +35,7 @@ body {
 .nav-item-link {
   text-transform: uppercase;
   margin-left: 100px;
-  width: 100%;
+  width: 34%;
 }
 .logonziv {
   width: 8rem;
@@ -59,6 +62,22 @@ body {
   text-transform: uppercase;
   margin-bottom: 30px;
   font-size: 1.5rem;
+}
+
+.phone_link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  &:hover {
+    color: #c82333;
+    font-weight: 600;
+    text-decoration: none;
+  }
+}
+
+.phone_icon {
+  width: 50px;
+  background-color: #001f3e;
 }
 
 // Sidebar menu
@@ -121,10 +140,12 @@ body {
 .caracters__block {
   display: inline-block;
   width: 56%;
-  flet: right;
+  float: right;
 }
 .callme__block {
   float: right;
+  position: absolute;
+  right: 0;
 }
 table tr {
   line-height: auto;
