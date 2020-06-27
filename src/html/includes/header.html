@@ -8,6 +8,12 @@
     />
 
     <link rel="shortcut icon" href="favicon/favicon.ico" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
 
     <link rel="stylesheet" href="css/style.bundle.css" />
 	<link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css" />
@@ -15,6 +21,7 @@
     <title><%=title%></title>
   </head>
   <body>
+<<<<<<< HEAD
   
   <!-- Call me modal window-->
   <div
@@ -23,6 +30,69 @@
                 tabindex="-1"
                 role="dialog"
                 aria-labelledby="call_meModalLabel"
+=======
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top nav__wrapper">
+      <div class="container">
+        <a class="navbar-brand" href="/">
+          <img
+            class="logonziv"
+            src="../../img/logonziv.png"
+            alt="АО НЗИВ логотип"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse navbar__block"
+          id="navbarResponsive"
+        >
+          <ul class="navbar-nav nav-item-link">
+            <li class="nav-item active">
+              <a class="nav-link" href="/"
+                >Главная
+                <!-- <span class="sr-only">(current)</span> -->
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contacts.html">Контакты</a>
+            </li>
+          </ul>
+          <div class="phone__block">
+            <a href="tel:+7-968-222-00-52" class="phone_link">
+              <span class="phone_number">
+                8-968-222-00-52
+              </span>
+              <i class="fa fa-whatsapp" aria-hidden="true"></i>
+            </a>
+          </div>
+          <div class="callme__block">
+            <div class="bd-example">
+              <button
+                type="button"
+                class="btn btn-danger modalbutton__callme"
+                data-toggle="modal"
+                data-target="#exampleModal"
+                data-whatever="@mdo"
+              >
+                Перезвоните мне
+              </button>
+              <div
+                class="modal fade"
+                id="callmeform"
+                tabindex="-1"
+                role="dialog"
+                aria-labelledby="callmeform"
+>>>>>>> e3f8ebf982bc87f595da9b842fcf4a79cc64a2c4
                 aria-hidden="true"
               >
                 <div class="modal-dialog" role="document">
@@ -38,7 +108,13 @@
                         aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                       </button>
+<<<<<<< HEAD
                       
+=======
+                      <h4 class="modal-title" id="callmeform">
+                        Перезвоните мне:
+                      </h4>
+>>>>>>> e3f8ebf982bc87f595da9b842fcf4a79cc64a2c4
                     </div>
                     <div class="modal-body">
                       <form type="POST" action="call_me_sendMail.php">
