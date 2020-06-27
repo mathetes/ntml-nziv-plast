@@ -10,10 +10,164 @@
     <link rel="shortcut icon" href="favicon/favicon.ico" />
 
     <link rel="stylesheet" href="css/style.bundle.css" />
+	<link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css" />
 
     <title><%=title%></title>
   </head>
   <body>
+  
+  <!-- Call me modal window-->
+  <div
+                class="modal fade"
+                id="call_me_modal"
+                tabindex="-1"
+                role="dialog"
+                aria-labelledby="call_meModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+					<h4 class="modal-title" id="call_meModalLabel">
+                        Перезвоните мне:
+                      </h4>
+                      <button
+                        type="button"
+                        class="close"
+                        data-dismiss="modal"
+                        aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                      
+                    </div>
+                    <div class="modal-body">
+                      <form type="POST" action="call_me_sendMail.php">
+                     
+                        <div class="form-group">
+                          <label for="recipient-name" class="form-control-label"
+                            >Ваше ФИО:</label
+                          >
+						   <div class="input-group mb-3">
+						   <div class="input-group-prepend">
+								<icon class="fa fa-2x fa-user"></icon>
+							</div>&nbsp;
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="recipient-name"
+							placeholder="Иванов Иван"
+                          />
+                        </div>
+						</div>
+                        <div class="form-group">
+                          <label for="message-text" class="form-control-label"
+                            >Номер телефона:</label
+                          >
+						   <div class="input-group mb-3">
+						   <div class="input-group-prepend">
+								<icon class="fa fa-2x fa-phone"></icon>
+							</div>&nbsp;
+                          <input
+							type="text"
+                            class="form-control"
+                            id="phone"
+							placeholder="+7(xxx)xxx-xx-xx"
+                          />
+						  </div>
+                        </div>
+						 <button type="submit" class="btn btn-primary float-left">
+                        Заказать звонок
+                      </button>
+					  <button
+                        type="button"
+                        class="btn btn-secondary float-right"
+                        data-dismiss="modal">
+                        Закрыть
+                      </button>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      
+                     
+                    </div>
+                  </div>
+                </div>
+              </div>
+			  
+	<!-- end call_ME MODAL WINDOW-->
+	
+	<!-- order modal window-->
+	<div
+                class="modal fade"
+                id="order_modal"
+                tabindex="-1"
+                role="dialog"
+                aria-labelledby="orderModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+					<h4 class="modal-title" id="orderModalLabel">
+                        Получить коммерческое предложение:
+                      </h4>
+                      <button
+                        type="button"
+                        class="close"
+                        data-dismiss="modal"
+                        aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                      
+                    </div>
+                    <div class="modal-body">
+                      <form type="POST" action="order_sendMail.php">
+                      
+                        <div class="form-group">
+                          <label for="recipient-name" class="form-control-label">Ваше ФИО:</label>
+						  <div class="input-group mb-3">
+						   <div class="input-group-prepend">
+								<icon class="fa fa-2x fa-user"></icon>
+							</div>&nbsp;
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="recipient-name"
+							placeholder="Иванов Иван"
+                          />
+						  </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="message-text" class="form-control-label"
+                            >Ваш EMAIL:</label
+                          >
+						   <div class="input-group mb-3">
+						   <div class="input-group-prepend">
+								<icon class="fa fa-2x fa-envelope"></icon>
+							</div>&nbsp;
+                         <input type="email" class="form-control" id="recipient_email" placeholder="fio@company.org" />
+                        </div>
+						</div>
+						 <button type="submit" class="btn btn-primary float-left">
+                        Заказать звонок
+                      </button>
+					  <button
+                        type="button"
+                        class="btn btn-secondary float-right"
+                        data-dismiss="modal">
+                        Закрыть
+                      </button>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      
+                     
+                    </div>
+                  </div>
+                </div>
+              </div>
+	<!-- end order modal window-->
+	
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top nav__wrapper">
       <div class="container">
@@ -47,82 +201,24 @@
               <a class="nav-link" href="second.html">Контакты</a>
             </li>
           </ul>
+		  
           <div class="callme__block">
             <div class="bd-example">
               <button
                 type="button"
                 class="btn btn-danger modalbutton__callme"
                 data-toggle="modal"
-                data-target="#exampleModal"
+                data-target="#call_me_modal"
                 data-whatever="@mdo"
               >
                 Перезвоните мне
               </button>
-              <div
-                class="modal fade"
-                id="exampleModal"
-                tabindex="-1"
-                role="dialog"
-                aria-labelledby="exampleModalLabel"
-                aria-hidden="true"
-              >
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <button
-                        type="button"
-                        class="close"
-                        data-dismiss="modal"
-                        aria-label="Close"
-                      >
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                      <h4 class="modal-title" id="exampleModalLabel">
-                        Перезвоните мне:
-                      </h4>
-                    </div>
-                    <div class="modal-body">
-                      <form>
-                        <div class="form-group">
-                          <label for="recipient-name" class="form-control-label"
-                            >Ваше ФИО:</label
-                          >
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="recipient-name"
-                          />
-                        </div>
-                        <div class="form-group">
-                          <label for="message-text" class="form-control-label"
-                            >Номер телефона:</label
-                          >
-                          <textarea
-                            class="form-control"
-                            id="message-text"
-                          ></textarea>
-                        </div>
-                      </form>
-                    </div>
-                    <div class="modal-footer">
-                      <button
-                        type="button"
-                        class="btn btn-secondary"
-                        data-dismiss="modal"
-                      >
-                        Закрыть
-                      </button>
-                      <button type="button" class="btn btn-primary">
-                        Заказать звонок
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              
             </div>
           </div>
         </div>
       </div>
     </nav>
+	
   </body>
 </html>
