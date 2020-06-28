@@ -21,84 +21,19 @@
     <title><%=title%></title>
   </head>
   <body>
-<<<<<<< HEAD
-  
-  <!-- Call me modal window-->
+  <!-- Call me modal window -->
   <div
                 class="modal fade"
                 id="call_me_modal"
                 tabindex="-1"
                 role="dialog"
-                aria-labelledby="call_meModalLabel"
-=======
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top nav__wrapper">
-      <div class="container">
-        <a class="navbar-brand" href="/">
-          <img
-            class="logonziv"
-            src="../../img/logonziv.png"
-            alt="АО НЗИВ логотип"
-          />
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarResponsive"
-          aria-controls="navbarResponsive"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div
-          class="collapse navbar-collapse navbar__block"
-          id="navbarResponsive"
-        >
-          <ul class="navbar-nav nav-item-link">
-            <li class="nav-item active">
-              <a class="nav-link" href="/"
-                >Главная
-                <!-- <span class="sr-only">(current)</span> -->
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contacts.html">Контакты</a>
-            </li>
-          </ul>
-          <div class="phone__block">
-            <a href="tel:+7-968-222-00-52" class="phone_link">
-              <span class="phone_number">
-                8-968-222-00-52
-              </span>
-              <i class="fa fa-whatsapp" aria-hidden="true"></i>
-            </a>
-          </div>
-          <div class="callme__block">
-            <div class="bd-example">
-              <button
-                type="button"
-                class="btn btn-danger modalbutton__callme"
-                data-toggle="modal"
-                data-target="#exampleModal"
-                data-whatever="@mdo"
-              >
-                Перезвоните мне
-              </button>
-              <div
-                class="modal fade"
-                id="callmeform"
-                tabindex="-1"
-                role="dialog"
-                aria-labelledby="callmeform"
->>>>>>> e3f8ebf982bc87f595da9b842fcf4a79cc64a2c4
+                aria-labelledby="call_me_ModalLabel"
                 aria-hidden="true"
               >
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
-					<h4 class="modal-title" id="call_meModalLabel">
+					<h4 class="modal-title" id="call_me_ModalLabel">
                         Перезвоните мне:
                       </h4>
                       <button
@@ -108,22 +43,14 @@
                         aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                       </button>
-<<<<<<< HEAD
                       
-=======
-                      <h4 class="modal-title" id="callmeform">
-                        Перезвоните мне:
-                      </h4>
->>>>>>> e3f8ebf982bc87f595da9b842fcf4a79cc64a2c4
                     </div>
                     <div class="modal-body">
-                      <form type="POST" action="call_me_sendMail.php">
-                     
+                      <form type="POST" action="/php/call_me_sendMail.php">
+                      
                         <div class="form-group">
-                          <label for="recipient-name" class="form-control-label"
-                            >Ваше ФИО:</label
-                          >
-						   <div class="input-group mb-3">
+                          <label for="recipient-name" class="form-control-label">Представьтесь пожалуйста:</label>
+						  <div class="input-group mb-3">
 						   <div class="input-group-prepend">
 								<icon class="fa fa-2x fa-user"></icon>
 							</div>&nbsp;
@@ -131,26 +58,22 @@
                             type="text"
                             class="form-control"
                             id="recipient-name"
-							placeholder="Иванов Иван"
+							name="recipient-name"
+							placeholder="Фамилия Имя Отчество"
                           />
+						  </div>
                         </div>
-						</div>
                         <div class="form-group">
                           <label for="message-text" class="form-control-label"
-                            >Номер телефона:</label
+                            >Телефон для связи:</label
                           >
 						   <div class="input-group mb-3">
 						   <div class="input-group-prepend">
 								<icon class="fa fa-2x fa-phone"></icon>
 							</div>&nbsp;
-                          <input
-							type="text"
-                            class="form-control"
-                            id="phone"
-							placeholder="+7(xxx)xxx-xx-xx"
-                          />
-						  </div>
+                         <input type="text" class="form-control" id="recipient_phone" name="recipient_phone" placeholder="+7(xxx)-xxx-xx-xx" />
                         </div>
+						</div>
 						 <button type="submit" class="btn btn-primary float-left">
                         Заказать звонок
                       </button>
@@ -169,8 +92,7 @@
                   </div>
                 </div>
               </div>
-			  
-	<!-- end call_ME MODAL WINDOW-->
+ 	<!-- end call_ME MODAL WINDOW-->
 	
 	<!-- order modal window-->
 	<div
@@ -197,7 +119,7 @@
                       
                     </div>
                     <div class="modal-body">
-                      <form type="POST" action="order_sendMail.php">
+                      <form type="POST" action="/php/order_sendMail.php">
                       
                         <div class="form-group">
                           <label for="recipient-name" class="form-control-label">Ваше ФИО:</label>

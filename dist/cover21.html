@@ -4,10 +4,97 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
     <link rel="shortcut icon" href="favicon/favicon.ico" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="css/style.bundle.css" />
+    <link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css" />
     <title>Ведро с крышкой - 21 литров | АО НЗИВ</title>
   </head>
   <body>
+    <div
+      class="modal fade"
+      id="call_me_modal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="call_me_ModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="call_me_ModalLabel">Перезвоните мне:</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form type="POST" action="/php/call_me_sendMail.php">
+              <div class="form-group">
+                <label for="recipient-name" class="form-control-label">Ваше ФИО:</label>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend"><icon class="fa fa-2x fa-user"></icon></div>
+                  &nbsp; <input class="form-control" id="recipient-name" placeholder="Иванов Иван" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="message-text" class="form-control-label">Ваш телефон:</label>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend"><icon class="fa fa-2x fa-phone"></icon></div>
+                  &nbsp; <input class="form-control" id="recipient_phone" placeholder="+7(xxx)-xxx-xx-xx" />
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary float-left">Заказать звонок</button>
+              <button type="button" class="btn btn-secondary float-right" data-dismiss="modal">Закрыть</button>
+            </form>
+          </div>
+          <div class="modal-footer"></div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="order_modal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="orderModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="orderModalLabel">Получить коммерческое предложение:</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form type="POST" action="/php/order_sendMail.php">
+              <div class="form-group">
+                <label for="recipient-name" class="form-control-label">Ваше ФИО:</label>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend"><icon class="fa fa-2x fa-user"></icon></div>
+                  &nbsp; <input class="form-control" id="recipient-name" placeholder="Иванов Иван" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="message-text" class="form-control-label">Ваш EMAIL:</label>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend"><icon class="fa fa-2x fa-envelope"></icon></div>
+                  &nbsp; <input type="email" class="form-control" id="recipient_email" placeholder="fio@company.org" />
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary float-left">Заказать звонок</button>
+              <button type="button" class="btn btn-secondary float-right" data-dismiss="modal">Закрыть</button>
+            </form>
+          </div>
+          <div class="modal-footer"></div>
+        </div>
+      </div>
+    </div>
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top nav__wrapper">
       <div class="container">
         <a class="navbar-brand" href="#"><img class="logonziv" src="../../img/logonziv.png" alt="АО НЗИВ логотип" /> </a
@@ -27,7 +114,7 @@
             <li class="nav-item active">
               <a class="nav-link" href="#">Главная <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+            <li class="nav-item"><a class="nav-link" href="second.html">Контакты</a></li>
           </ul>
           <div class="callme__block">
             <div class="bd-example">
@@ -35,46 +122,11 @@
                 type="button"
                 class="btn btn-danger modalbutton__callme"
                 data-toggle="modal"
-                data-target="#exampleModal"
+                data-target="#call_me_modal"
                 data-whatever="@mdo"
               >
                 Перезвоните мне
               </button>
-              <div
-                class="modal fade"
-                id="callmeform"
-                tabindex="-1"
-                role="dialog"
-                aria-labelledby="callmeform"
-                aria-hidden="true"
-              >
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                      <h4 class="modal-title" id="callmeform">Перезвоните мне:</h4>
-                    </div>
-                    <div class="modal-body">
-                      <form>
-                        <div class="form-group">
-                          <label for="recipient-name" class="form-control-label">Ваше ФИО:</label>
-                          <input class="form-control" id="recipient-name" />
-                        </div>
-                        <div class="form-group">
-                          <label for="message-text" class="form-control-label">Номер телефона:</label>
-                          <textarea class="form-control" id="message-text"></textarea>
-                        </div>
-                      </form>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
-                      <button type="button" class="btn btn-primary">Заказать звонок</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -141,16 +193,28 @@
         <div id="content-slider">
           <div class="wrap-slider">
             <input type="radio" id="a-1" name="a" /> <input type="radio" id="a-2" name="a" />
-            <nav id="main"><label for="a-1" class="first"></label> <label for="a-2" class="first"></label></nav>
-            <nav id="control"><label for="a-1"></label> <label for="a-2"></label></nav>
+            <input type="radio" id="a-3" name="a" /> <input type="radio" id="a-4" name="a" />
+            <nav id="main">
+              <label for="a-1" class="first"></label> <label for="a-2" class="first"></label>
+              <label for="a-3" class="first"></label> <label for="a-4" class="first"></label>
+            </nav>
+            <nav id="control">
+              <label for="a-1"></label> <label for="a-2"></label> <label for="a-3"></label> <label for="a-4"></label>
+            </nav>
             <span id="b-1" class="th" tabindex="10"
               ><img src="./../../../img/products/cover_from21.png" alt="" id="p-1" /> </span
             ><span id="b-2" class="th" tabindex="11"
-              ><img src="./../../../img/products/cover21.png" alt="" id="p-2"
+              ><img src="./../../../img/products/yellow_cover_21.png" alt="" id="p-2" /> </span
+            ><span id="b-3" class="th" tabindex="11"
+              ><img src="./../../../img/products/transp_cover_21.png" alt="" id="p-3" /> </span
+            ><span id="b-4" class="th" tabindex="11"
+              ><img src="./../../../img/products/cover21.png" alt="" id="p-4"
             /></span>
             <div class="slider">
               <div class="inset">
                 <figure><img src="./../../../img/products/cover_from21.png" alt="" id="i-1" class="f" /></figure>
+                <figure><img src="./../../../img/products/yellow_cover_21.png" alt="" id="i-2" class="f" /></figure>
+                <figure><img src="./../../../img/products/transp_cover_21.png" alt="" id="i-2" class="f" /></figure>
                 <figure><img src="./../../../img/products/cover21.png" alt="" id="i-2" class="f" /></figure>
               </div>
             </div>
@@ -219,41 +283,51 @@
             </tr>
           </colgroup>
         </table>
-        <div class="modalbutton__block">
-          <button
-            type="button"
-            class="btn btn-danger modalbutton__commerce"
-            data-toggle="modal"
-            data-target="#exampleModal"
-          >
-            Запросить коммерческое предложение
-          </button>
-          <div
-            class="modal fade"
-            id="exampleModal"
-            tabindex="-1"
-            role="dialog"
-            aria-labelledby="exampleModalLabel"
-            aria-hidden="true"
-          >
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="ModalOrder">Запросить коммерческое предложение</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <input classname="modal__form_input" type="email" placeholder="Ваш email" />
-                  <input classname="modal__form_input" type="phone" placeholder="Ваш телефон" />
-                  <input classname="modal__form_input" placeholder="Ваше ФИО" />
-                  <input classname="modal__form_input" type="textarea" placeholder="Дополнительная информация" />
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Отправить</button>
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
-                </div>
+        <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="exampleModalLabel"
+          id="callmeform"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="callmeform"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="exampleModalLabel">Перезвоните мне:</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="callmeform">Перезвоните мне:</h4>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="form-group">
+                    <label for="recipient-name" class="form-control-label">Ваше ФИО:</label>
+                    <input class="form-control" id="recipient-name" />
+                  </div>
+                  <div class="form-group">
+                    <label for="message-text" class="form-control-label">Номер телефона:</label>
+                    <textarea class="form-control" id="message-text"></textarea>
+                    <label for="recipient-name" class="form-control-label">Ваше ФИО:</label>
+                    <input class="form-control" id="recipient-name" />
+                  </div>
+                  <div class="form-group">
+                    <label for="message-text" class="form-control-label">Номер телефона:</label>
+                    <textarea class="form-control" id="message-text"></textarea>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                <button type="button" class="btn btn-primary">Заказать звонок</button>
               </div>
             </div>
           </div>
@@ -262,8 +336,10 @@
     </div>
   </div>
 </div>
-<footer>
-  <div class="container"><p class="text-muted">АО "Новосибирский завод искусственного волокна"</p></div>
+<footer class="footer__block">
+  <div class="container">
+    <p class="text-muted">Акционерное общество "Новосибирский завод искусственного волокна"</p>
+  </div>
 </footer>
 <script src="../../../node_modules/jquery/dist/jquery.slim.min.js"></script>
 <script src="js/bundle.js"></script>

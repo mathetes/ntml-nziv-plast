@@ -1,47 +1,104 @@
-<<<<<<< HEAD
- <!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-
-    <link rel="shortcut icon" href="favicon/favicon.ico" />
-
-    <link rel="stylesheet" href="css/style.bundle.css" />
-
-    <title>Заголовок | АО НЗИВ</title>
-  </head>
-  <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top nav__wrapper">
-      <div class="container">
-        <a class="navbar-brand" href="#">
-          <img
-            class="logonziv"
-            src="../../img/logonziv.png"
-            alt="АО НЗИВ логотип"
-          />
-        </a>
-        <button
-=======
 <!DOCTYPE html>
 <html lang="ru">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
     <link rel="shortcut icon" href="favicon/favicon.ico" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="css/style.bundle.css" />
+    <link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css" />
     <title>Ведро с крышкой - 5 литров | АО НЗИВ</title>
   </head>
   <body>
+    <div
+      class="modal fade"
+      id="call_me_modal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="call_me_ModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="call_me_ModalLabel">Перезвоните мне:</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form type="POST" action="/php/call_me_sendMail.php">
+              <div class="form-group">
+                <label for="recipient-name" class="form-control-label">Ваше ФИО:</label>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend"><icon class="fa fa-2x fa-user"></icon></div>
+                  &nbsp; <input class="form-control" id="recipient-name" placeholder="Иванов Иван" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="message-text" class="form-control-label">Ваш телефон:</label>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend"><icon class="fa fa-2x fa-phone"></icon></div>
+                  &nbsp; <input class="form-control" id="recipient_phone" placeholder="+7(xxx)-xxx-xx-xx" />
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary float-left">Заказать звонок</button>
+              <button type="button" class="btn btn-secondary float-right" data-dismiss="modal">Закрыть</button>
+            </form>
+          </div>
+          <div class="modal-footer"></div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="order_modal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="orderModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="orderModalLabel">Получить коммерческое предложение:</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form type="POST" action="/php/order_sendMail.php">
+              <div class="form-group">
+                <label for="recipient-name" class="form-control-label">Ваше ФИО:</label>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend"><icon class="fa fa-2x fa-user"></icon></div>
+                  &nbsp; <input class="form-control" id="recipient-name" placeholder="Иванов Иван" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="message-text" class="form-control-label">Ваш EMAIL:</label>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend"><icon class="fa fa-2x fa-envelope"></icon></div>
+                  &nbsp; <input type="email" class="form-control" id="recipient_email" placeholder="fio@company.org" />
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary float-left">Заказать звонок</button>
+              <button type="button" class="btn btn-secondary float-right" data-dismiss="modal">Закрыть</button>
+            </form>
+          </div>
+          <div class="modal-footer"></div>
+        </div>
+      </div>
+    </div>
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top nav__wrapper">
       <div class="container">
         <a class="navbar-brand" href="#"><img class="logonziv" src="../../img/logonziv.png" alt="АО НЗИВ логотип" /> </a
         ><button
->>>>>>> e3f8ebf982bc87f595da9b842fcf4a79cc64a2c4
           class="navbar-toggler"
           type="button"
           data-toggle="collapse"
@@ -55,20 +112,9 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav nav-item-link">
             <li class="nav-item active">
-<<<<<<< HEAD
-              <a class="nav-link" href="#"
-                >Главная
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="second.html">Контакты</a>
-            </li>
-=======
               <a class="nav-link" href="#">Главная <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
->>>>>>> e3f8ebf982bc87f595da9b842fcf4a79cc64a2c4
+            <li class="nav-item"><a class="nav-link" href="second.html">Контакты</a></li>
           </ul>
           <div class="callme__block">
             <div class="bd-example">
@@ -76,100 +122,11 @@
                 type="button"
                 class="btn btn-danger modalbutton__callme"
                 data-toggle="modal"
-                data-target="#exampleModal"
+                data-target="#call_me_modal"
                 data-whatever="@mdo"
               >
                 Перезвоните мне
               </button>
-              <div
-                class="modal fade"
-<<<<<<< HEAD
-                id="exampleModal"
-                tabindex="-1"
-                role="dialog"
-                aria-labelledby="exampleModalLabel"
-=======
-                id="callmeform"
-                tabindex="-1"
-                role="dialog"
-                aria-labelledby="callmeform"
->>>>>>> e3f8ebf982bc87f595da9b842fcf4a79cc64a2c4
-                aria-hidden="true"
-              >
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-<<<<<<< HEAD
-                      <button
-                        type="button"
-                        class="close"
-                        data-dismiss="modal"
-                        aria-label="Close"
-                      >
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                      <h4 class="modal-title" id="exampleModalLabel">
-                        Перезвоните мне:
-                      </h4>
-=======
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                      <h4 class="modal-title" id="callmeform">Перезвоните мне:</h4>
->>>>>>> e3f8ebf982bc87f595da9b842fcf4a79cc64a2c4
-                    </div>
-                    <div class="modal-body">
-                      <form>
-                        <div class="form-group">
-<<<<<<< HEAD
-                          <label for="recipient-name" class="form-control-label"
-                            >Ваше ФИО:</label
-                          >
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="recipient-name"
-                          />
-                        </div>
-                        <div class="form-group">
-                          <label for="message-text" class="form-control-label"
-                            >Номер телефона:</label
-                          >
-                          <textarea
-                            class="form-control"
-                            id="message-text"
-                          ></textarea>
-=======
-                          <label for="recipient-name" class="form-control-label">Ваше ФИО:</label>
-                          <input class="form-control" id="recipient-name" />
-                        </div>
-                        <div class="form-group">
-                          <label for="message-text" class="form-control-label">Номер телефона:</label>
-                          <textarea class="form-control" id="message-text"></textarea>
->>>>>>> e3f8ebf982bc87f595da9b842fcf4a79cc64a2c4
-                        </div>
-                      </form>
-                    </div>
-                    <div class="modal-footer">
-<<<<<<< HEAD
-                      <button
-                        type="button"
-                        class="btn btn-secondary"
-                        data-dismiss="modal"
-                      >
-                        Закрыть
-                      </button>
-                      <button type="button" class="btn btn-primary">
-                        Заказать звонок
-                      </button>
-=======
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
-                      <button type="button" class="btn btn-primary">Заказать звонок</button>
->>>>>>> e3f8ebf982bc87f595da9b842fcf4a79cc64a2c4
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -177,256 +134,6 @@
     </nav>
   </body>
 </html>
-<<<<<<< HEAD
-
-
-<!-- Page Content -->
-<div class="container wrapper">
-  <div class="row align-items-top my-5">
-    <div class="col-sm-12 col-lg-3">
-      <sidebar>
-  <h4>Каталог</h4>
-  <nav>
-    <li class="product_item">
-      <a class="product_link" href="tank045.html">Банка 0,45 л с ручкой</a>
-    </li>
-    <li class="product_item">
-      <a class="product_link" href="tank065.html">Банка 0,65 л с ручкой</a>
-    </li>
-    <li class="product_item">
-      <a class="product_link" href="cover045.html">Крышка на 0,45-0,8 л</a>
-    </li>
-    <li class="product_item">
-      <a class="product_link" href="bucket3.html">Ведро 3,0 л с ручкой</a>
-    </li>
-    <li class="product_item">
-      <a class="product_link" href="bucket5.html">Ведро 5,0 л с ручкой</a>
-    </li>
-    <li class="product_item">
-      <a class="product_link" href="bucket10.html">Ведро 10,0 л с ручкой</a>
-    </li>
-    <li class="product_item">
-      <a class="product_link" href="bucket21.html">Ведро 21,0 л с ручкой</a>
-    </li>
-    <li class="product_item">
-      <a class="product_link" href="tank32.html">Бак 32,0 л</a>
-    </li>
-    <li class="product_item">
-      <a class="product_link" href="cover3.html">Крышка для ведра 3,0 л</a>
-    </li>
-    <li class="product_item">
-      <a class="product_link" href="cover5.html">Крышка для ведра 5,0 л</a>
-    </li>
-    <li class="product_item">
-      <a class="product_link" href="cover10.html">Крышка для ведра 10,0 л</a>
-    </li>
-    <li class="product_item">
-      <a class="product_link" href="cover21.html">Крышка для ведра 21,0 л</a>
-    </li>
-    <li class="product_item">
-      <a class="product_link" href="cover32.html">Крышка для бака 32,0 л</a>
-    </li>
-  </nav>
-</sidebar>
-
-    </div>
-
-    <div class="col-sm-12 col-lg-9 sidebar__block">
-      <div class="iconsblock">
-        <section>
-  <div class="icon__block">
-    <div class="caracter__card">
-      <img
-        class="icon__block_picture"
-        src="../../img/icons/pack.png"
-        alt="Преимущество №"
-      />
-      <div class="caracter__card_body">
-        <div class="icon__link" href="#">
-          Упаковка
-        </div>
-      </div>
-    </div>
-
-    <div class="caracter__card">
-      <img
-        class="icon__block_picture"
-        src="../../img/icons/build.png"
-        alt="Преимущество №"
-      />
-      <div class="caracter__card_body">
-        <div class="icon__link" href="#">
-          Строительная
-        </div>
-      </div>
-    </div>
-    <div class="caracter__card">
-      <img
-        class="icon__block_picture"
-        src="../../img/icons/transport.png"
-        alt="Преимущество №"
-      />
-      <div class="caracter__card_body">
-        <div class="icon__link" href="#">
-          Транспортировка
-        </div>
-      </div>
-    </div>
-    <div class="caracter__card">
-      <img
-        class="icon__block_picture"
-        src="../../img/icons/food.png"
-        alt="Преимущество №"
-      />
-      <div class="caracter__card_body">
-        <div class="icon__link" href="#">
-          Пищевая продукция
-        </div>
-      </div>
-    </div>
-    <div class="caracter__card">
-      <img
-        class="icon__block_picture"
-        src="../../img/icons/safe.png"
-        alt="Преимущество №"
-      />
-      <div class="caracter__card_body">
-        <div class="icon__link" href="#">
-          Хранение
-        </div>
-      </div>
-    </div>
-    <div class="caracter__card">
-      <img
-        class="icon__block_picture"
-        src="../../img/icons/paint.png"
-        alt="Преимущество №"
-      />
-      <div class="caracter__card_body">
-        <div class="icon__link" href="#">
-          Лакокрасочная
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-      </div>
-      <h2 class="product__heading">Ведро с крышкой - 5 литров</h2>
-      <div class="image__block">
-        <img
-  class="img-fluid rounded mb-4 mb-lg-0 product__pic"
-  src="../../img/products/bucket5.png"
-  alt="Ведро с ручкой"
-/>
-
-      </div>
-      <div class="caracters__block">
-        <h2 class="font-weight-light caracters__heading">
-          Характеристики изделия
-        </h2>
-        <table class="table table-striped">
-  <col />
-  <col />
-  <tr>
-    <td>Изделие</td>
-    <td>Ведро 5,0 л с ручкой</td>
-  </tr>
-  <tr>
-    <td>Материал</td>
-    <td>ПП</td>
-  </tr>
-  <tr>
-    <td>Масса, кг</td>
-    <td>0,179</td>
-  </tr>
-  <tr>
-    <td>Диаметр горловины Дг, мм</td>
-    <td>224</td>
-  </tr>
-  <tr>
-    <td>Высота Н, мм</td>
-    <td>185</td>
-  </tr>
-  <tr>
-    <td>Диаметр дна Дд, мм</td>
-    <td>194</td>
-  </tr>
-  <tr>
-    <td>Вид упаковки</td>
-    <td>мешки из полимерной пленки</td>
-  </tr>
-  <tr>
-    <td>Кол-во в упаковке, шт.</td>
-    <td>25</td>
-  </tr>
-  <tr>
-    <td>Вес , кг</td>
-    <td>4,47</td>
-  </tr>
-  <tr>
-    <td>Габариты упаковки, см</td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td>Объем упаковки, м куб.</td>
-    <td>&nbsp;</td>
-  </tr>
-</table>
- <div class="modalbutton__block">
-  <!-- Button trigger modal -->
-  <button
-    type="button"
-    class="btn btn-danger modalbutton__commerce"
-    data-toggle="modal"
-    data-target="#exampleModal"
-  >
-    Заказать коммерческое предложение
-  </button>
-
-  <!-- Modal -->
-  <div
-    class="modal fade"
-    id="exampleModal"
-    tabindex="-1"
-    role="dialog"
-    aria-labelledby="exampleModalLabel"
-    aria-hidden="true"
-  >
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="ModalOrder">
-            Заказать коммерческое предложение
-          </h5>
-          <button
-            type="button"
-            class="close"
-            data-dismiss="modal"
-            aria-label="Close"
-          >
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          Lorem ipsum
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">
-            Отправить
-          </button>
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">
-            Закрыть
-          </button>
-=======
 <div class="container wrapper">
   <div class="row align-items-top my-5">
     <div class="col-sm-12 col-lg-3">
@@ -486,17 +193,29 @@
         <div id="content-slider">
           <div class="wrap-slider">
             <input type="radio" id="a-1" name="a" /> <input type="radio" id="a-2" name="a" />
-            <nav id="main"><label for="a-1" class="first"></label> <label for="a-2" class="first"></label></nav>
-            <nav id="control"><label for="a-1"></label> <label for="a-2"></label></nav>
+            <input type="radio" id="a-3" name="a" /> <input type="radio" id="a-4" name="a" />
+            <nav id="main">
+              <label for="a-1" class="first"></label> <label for="a-2" class="first"></label>
+              <label for="a-3" class="first"></label> <label for="a-4" class="first"></label>
+            </nav>
+            <nav id="control">
+              <label for="a-1"></label> <label for="a-2"></label> <label for="a-3"></label> <label for="a-4"></label>
+            </nav>
             <span id="b-1" class="th" tabindex="10"
               ><img src="./../../../img/products/bucket5.png" alt="" id="p-1" /> </span
             ><span id="b-2" class="th" tabindex="11"
-              ><img src="./../../../img/products/bucket 5.png" alt="" id="p-2"
+              ><img src="./../../../img/products/yellow_backet_5.png" alt="" id="p-2" /> </span
+            ><span id="b-3" class="th" tabindex="11"
+              ><img src="./../../../img/products/transp_backet_5.png" alt="" id="p-3" /> </span
+            ><span id="b-4" class="th" tabindex="11"
+              ><img src="./../../../img/products/bucket 5.png" alt="" id="p-4"
             /></span>
             <div class="slider">
               <div class="inset">
                 <figure><img src="./../../../img/products/bucket5.png" alt="" id="i-1" class="f" /></figure>
-                <figure><img src="./../../../img/products/bucket 5.png" alt="" id="i-2" class="f" /></figure>
+                <figure><img src="./../../../img/products/yellow_backet_5.png" alt="" id="i-2" class="f" /></figure>
+                <figure><img src="./../../../img/products/transp_backet_5.png" alt="" id="i-3" class="f" /></figure>
+                <figure><img src="./../../../img/products/bucket 5.png" alt="" id="i-4" class="f" /></figure>
               </div>
             </div>
           </div>
@@ -564,74 +283,63 @@
             </tr>
           </colgroup>
         </table>
-        <div class="modalbutton__block">
-          <button
-            type="button"
-            class="btn btn-danger modalbutton__commerce"
-            data-toggle="modal"
-            data-target="#exampleModal"
-          >
-            Запросить коммерческое предложение
-          </button>
-          <div
-            class="modal fade"
-            id="exampleModal"
-            tabindex="-1"
-            role="dialog"
-            aria-labelledby="exampleModalLabel"
-            aria-hidden="true"
-          >
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="ModalOrder">Запросить коммерческое предложение</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <input classname="modal__form_input" type="email" placeholder="Ваш email" />
-                  <input classname="modal__form_input" type="phone" placeholder="Ваш телефон" />
-                  <input classname="modal__form_input" placeholder="Ваше ФИО" />
-                  <input classname="modal__form_input" type="textarea" placeholder="Дополнительная информация" />
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Отправить</button>
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
-                </div>
+        <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="exampleModalLabel"
+          id="callmeform"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="callmeform"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="exampleModalLabel">Перезвоните мне:</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="callmeform">Перезвоните мне:</h4>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="form-group">
+                    <label for="recipient-name" class="form-control-label">Ваше ФИО:</label>
+                    <input class="form-control" id="recipient-name" />
+                  </div>
+                  <div class="form-group">
+                    <label for="message-text" class="form-control-label">Номер телефона:</label>
+                    <textarea class="form-control" id="message-text"></textarea>
+                    <label for="recipient-name" class="form-control-label">Ваше ФИО:</label>
+                    <input class="form-control" id="recipient-name" />
+                  </div>
+                  <div class="form-group">
+                    <label for="message-text" class="form-control-label">Номер телефона:</label>
+                    <textarea class="form-control" id="message-text"></textarea>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                <button type="button" class="btn btn-primary">Заказать звонок</button>
               </div>
             </div>
           </div>
->>>>>>> e3f8ebf982bc87f595da9b842fcf4a79cc64a2c4
         </div>
       </div>
     </div>
   </div>
 </div>
-<<<<<<< HEAD
-
-      </div>
-    </div>
-  </div>
-</div>
-
-<footer>
+<footer class="footer__block">
   <div class="container">
-    <p class="text-muted">АО "Новосибирский завод искусственного волокна"</p>
+    <p class="text-muted">Акционерное общество "Новосибирский завод искусственного волокна"</p>
   </div>
-</footer>
-
-	<script src="../../../node_modules/jquery/dist/jquery.slim.min.js"></script>
-
-    <script src="js/bundle.js"></script>
-
-  </body>
-</html>
-
-=======
-<footer>
-  <div class="container"><p class="text-muted">АО "Новосибирский завод искусственного волокна"</p></div>
 </footer>
 <script src="../../../node_modules/jquery/dist/jquery.slim.min.js"></script>
 <script src="js/bundle.js"></script>
->>>>>>> e3f8ebf982bc87f595da9b842fcf4a79cc64a2c4
