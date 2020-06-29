@@ -25,8 +25,9 @@
         </h2>
         <%=
         _.template(require('./../includes/buckets/table_bucket3.html').default)(data)
-        %>  
-		</div>
+        %> <%=
+        _.template(require('./../includes/modalorder.html').default)(data) %>
+      </div>
     </div>
   </div>
 </div>

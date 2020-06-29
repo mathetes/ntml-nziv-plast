@@ -82,6 +82,16 @@ body {
 .fa-whatsapp {
   color: green;
 }
+.contacts__block {
+  text-align: center;
+}
+.contacts__links {
+  color: #fff;
+  &:hover {
+    color: red;
+    text-decoration: none;
+  }
+}
 
 // Sidebar menu
 .product {
