@@ -80,13 +80,41 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h4 class="modal-title" id="orderModalLabel">Получить коммерческое предложение:</h4>
+            <h4 class="modal-title" id="orderModalLabel">Запросить коммерческое предложение:</h4>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
             <form method="POST" action="/php/order_sendMail.php">
+              <div class="form-group">
+                <label for="message-text" class="form-control-label">Ваше имя:</label>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend"><icon class="fa fa-2x fa-user"></icon></div>
+                  &nbsp;
+                  <input
+                    required
+                    class="form-control"
+                    id="recipient_name"
+                    name="recipient_name"
+                    placeholder="Ваше ФИО"
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="message-text" class="form-control-label">Компания:</label>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend"><icon class="fa fa-2x fa-building"></icon></div>
+                  &nbsp;
+                  <input
+                    required
+                    class="form-control"
+                    id="recipient_сompany"
+                    name="recipient_сompany"
+                    placeholder="Название вашей компании"
+                  />
+                </div>
+              </div>
               <div class="form-group">
                 <label for="message-text" class="form-control-label">Ваш EMAIL:</label>
                 <div class="input-group mb-3">
@@ -104,7 +132,7 @@
               </div>
               <div class="form-group">
                 <label for="recipient-name" class="form-control-label">Сообщение:</label>
-                <textarea required class="form-control" id="recipient-message" name="recipient-name"></textarea>
+                <textarea required class="form-control" id="recipient-message" name="recipient-message"></textarea>
               </div>
               <button type="submit" class="btn btn-primary float-left">Отправить</button>
               <button type="button" class="btn btn-secondary float-right" data-dismiss="modal">Закрыть</button>
@@ -116,7 +144,7 @@
     </div>
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top nav__wrapper">
       <div class="container">
-        <a class="navbar-brand" href="#"><img class="logonziv" src="../../img/logonziv.png" alt="АО НЗИВ логотип" /> </a
+        <a class="navbar-brand" href="/"><img class="logonziv" src="../../img/logonziv.png" alt="АО НЗИВ логотип" /> </a
         ><button
           class="navbar-toggler"
           type="button"
@@ -128,13 +156,16 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
+        <div class="collapse navbar-collapse navbar__block" id="navbarResponsive">
           <ul class="navbar-nav nav-item-link">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Главная <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item"><a class="nav-link" href="second.html">Контакты</a></li>
+            <li class="nav-item active"><a class="nav-link" href="/">Главная</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
           </ul>
+          <div class="phone__block">
+            <a href="tel:+7-968-222-00-52" class="phone_link"
+              ><span class="phone_number">8-968-222-00-52 </span><i class="fa fa-whatsapp" aria-hidden="true"></i
+            ></a>
+          </div>
           <div class="callme__block">
             <div class="bd-example">
               <button
@@ -306,19 +337,6 @@
           <a href="tank32.html" class="btn btn-danger btn-danger-props">Описание</a>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-12" style="text-align: center; margin-bottom: 10px;">
-      <button
-        type="button"
-        class="btn btn-danger modalbutton__order"
-        data-toggle="modal"
-        data-target="#order_modal"
-        data-whatever="@mdo"
-      >
-        Получить коммерческое предложение
-      </button>
     </div>
   </div>
   <footer class="footer__block">
