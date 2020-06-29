@@ -88,9 +88,37 @@
           <div class="modal-body">
             <form method="POST" action="/php/order_sendMail.php">
               <div class="form-group">
-                <label for="message-text" class="form-control-label">Ваш EMAIL:</label>
+                <label for="recipient_name" class="form-control-label">Представьтесь пожалуйста:</label>
                 <div class="input-group mb-3">
-                  <div class="input-group-prepend"><icon class="fa fa-2x fa-envelope"></icon></div>
+                  <div class="input-group-prepend" style="margin-right: 5px;">
+                    <icon class="fa fa-2x fa-user-circle"></icon>
+                  </div>
+                  &nbsp;
+                  <input
+                    required
+                    class="form-control"
+                    id="recipient_name"
+                    name="recipient_name"
+                    placeholder="Фамилия Имя Отчество"
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="recipient_org" class="form-control-label">Наименование организации:</label>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend" style="margin-right: 5px;">
+                    <icon class="fa fa-2x fa-group"></icon>
+                  </div>
+                  &nbsp;
+                  <input required class="form-control" id="recipient_org" name="recipient_org" placeholder="АО Союз" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="recipient_email" class="form-control-label">Ваш EMAIL:</label>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend" style="margin-right: 5px;">
+                    <icon class="fa fa-2x fa-envelope"></icon>
+                  </div>
                   &nbsp;
                   <input
                     type="email"
@@ -103,7 +131,7 @@
                 </div>
               </div>
               <div class="form-group">
-                <label for="recipient-name" class="form-control-label">Сообщение:</label>
+                <label for="recipient-messages" class="form-control-label">Сообщение:</label>
                 <textarea required class="form-control" id="recipient-message" name="recipient-message"></textarea>
               </div>
               <button type="submit" class="btn btn-primary float-left">Отправить</button>
