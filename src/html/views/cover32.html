@@ -1,6 +1,5 @@
-<% var data = { title: "Ведро с крышкой - 32 литров | АО НЗИВ", author:
-"Mathetes" }; %> <%=
-_.template(require('./../includes/header.html').default)(data) %>
+<% var data = { title: "Ведро с крышкой - 32 л. | АО НЗИВ", author: "Mathetes"
+}; %> <%= _.template(require('./../includes/header.html').default)(data) %>
 
 <!-- Page Content -->
 <div class="container wrapper">
@@ -14,7 +13,9 @@ _.template(require('./../includes/header.html').default)(data) %>
         <%= _.template(require('./../includes/iconsblock.html').default)(data)
         %>
       </div>
-      <h2 class="product__heading animate__animated animate__backInDown">Крышка на бак - 32 литра</h2>
+      <h2 class="product__heading animate__animated animate__backInDown">
+        Крышка на бак - 32 л.
+      </h2>
       <div class="image__block animate__animated animate__backInLeft">
         <%=
         _.template(require('./../includes/covers/cover_slider32.html').default)(data)
