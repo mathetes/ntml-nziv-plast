@@ -82,6 +82,16 @@ body {
 .fa-whatsapp {
   color: green;
 }
+.contacts__block {
+  text-align: center;
+}
+.contacts__links {
+  color: #fff;
+  &:hover {
+    color: red;
+    text-decoration: none;
+  }
+}
 
 // Sidebar menu
 .product {
@@ -89,10 +99,19 @@ body {
 }
 .product_item {
   list-style: none;
+  padding-left: 20px;
+  &:hover {
+    background-color: #c82333;
+    border-radius: 3px;
+  }
 }
 .product_link {
   line-height: 2.5rem;
   color: #001f3e;
+  &:hover {
+    text-decoration: none;
+    color: #fff;
+  }
 }
 .product__pic {
   width: 100% !important;
@@ -174,6 +193,12 @@ table tr {
   width: 100%;
   margin-bottom: 20px;
   border-radius: 5px;
+}
+
+//Features image
+.features__image {
+  width: 100%;
+  margin-bottom: 30px;
 }
 
 /* Sticky footer styles

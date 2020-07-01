@@ -13,7 +13,7 @@ _.template(require('./../includes/header.html').default)(data) %>
         <%= _.template(require('./../includes/iconsblock.html').default)(data)
         %>
       </div>
-      <h2 class="product__heading">Наши контакты</h2>
+      <h2 class="product__heading animate__animated animate__backInDown">Наши контакты</h2>
       <div class="contacts__block">
         <h2 class="font-weight-light caracters__heading">
           <adress>
@@ -21,9 +21,12 @@ _.template(require('./../includes/header.html').default)(data) %>
             633208, Новосибирская обл., г. Искитим, м-он Южный, д. 101<br />
           </adress>
           <br />
-          <a href="tel: +73832547774">+7(383) 254-77-74 вн. 521 или 561</a
+          <a class="contacts__links" href="tel: +73832547774"
+            >+7(383) 254-77-74 вн. 521 или 561</a
           ><br />
-          <a href="mailto: example@mail.ru">e-mail: sale@nziv.ru</a>
+          <a class="contacts__links" href="mailto: sale@nziv.ru"
+            >e-mail: sale@nziv.ru</a
+          >
         </h2>
         <%= _.template(require('./../includes/modalorder.html').default)(data)
         %>

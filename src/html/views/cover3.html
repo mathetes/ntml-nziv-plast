@@ -1,4 +1,4 @@
-<% var data = { title: "Крышка для ведра - 3 литра | АО НЗИВ", author:
+<% var data = { title: "Крышка для ведра - 3 л. | АО НЗИВ", author:
 "Mathetes" }; %> <%=
 _.template(require('./../includes/header.html').default)(data) %>
 
@@ -14,13 +14,13 @@ _.template(require('./../includes/header.html').default)(data) %>
         <%= _.template(require('./../includes/iconsblock.html').default)(data)
         %>
       </div>
-      <h2 class="product__heading">Крышка для ведра - 3 литра</h2>
-      <div class="image__block">
+      <h2 class="product__heading animate__animated animate__backInDown">Крышка для ведра - 3 л.</h2>
+      <div class="image__block animate__animated animate__backInLeft">
         <%=
         _.template(require('./../includes/covers/cover_slider3.html').default)(data)
         %>
       </div>
-      <div class="caracters__block">
+      <div class="caracters__block animate__animated animate__backInRight">
         <h2 class="font-weight-light caracters__heading">
           Характеристики изделия
         </h2>
@@ -31,6 +31,7 @@ _.template(require('./../includes/header.html').default)(data) %>
       </div>
     </div>
   </div>
+  <%= _.template(require('./../includes/features.html').default)(data) %>
 </div>
 
 <%= _.template(require('./../includes/footer.html').default)(data) %>
