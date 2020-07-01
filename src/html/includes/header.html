@@ -26,342 +26,105 @@
 
     <title><%=title%></title>
   </head>
-  <body>
-    <!-- Call me modal window -->
-    <div
-      class="modal fade"
-      id="call_me_modal"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="call_me_ModalLabel"
-      aria-hidden="true"
-    >
+  <body cz-shortcut-listen="true" class="" style="color: blue;">
+    <div class="modal fade" id="call_me_modal" tabindex="-1" role="dialog" aria-labelledby="call_me_ModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h4 class="modal-title" id="call_me_ModalLabel">
-              Перезвоните мне:
-            </h4>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
+            <h4 class="modal-title" id="call_me_ModalLabel">Перезвоните мне:</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
             </button>
           </div>
           <div class="modal-body">
             <form type="POST" action="/php/call_me_sendMail.php">
               <div class="form-group">
-                <label for="recipient-name" class="form-control-label"
-                  >Представьтесь пожалуйста:</label
-                >
+                <label for="recipient-name" class="form-control-label">Представьтесь пожалуйста:</label>
                 <div class="input-group mb-3">
-                  <div class="input-group-prepend">
-                    <icon class="fa fa-2x fa-user"></icon>
-                  </div>
+                  <div class="input-group-prepend"><icon class="fa fa-2x fa-user"></icon></div>
                   &nbsp;
-                  <input
-                    type="text"
-                    required
-                    class="form-control"
-                    id="recipient-name"
-                    name="recipient-name"
-                    placeholder="Фамилия Имя Отчество"
-                  />
+                  <input required="" class="form-control" id="recipient-name" name="recipient-name" placeholder="Фамилия Имя Отчество">
                 </div>
               </div>
               <div class="form-group">
-                <label for="message-text" class="form-control-label"
-                  >Телефон для связи:</label
-                >
+                <label for="message-text" class="form-control-label">Телефон для связи:</label>
                 <div class="input-group mb-3">
-                  <div class="input-group-prepend">
-                    <icon class="fa fa-2x fa-phone"></icon>
-                  </div>
+                  <div class="input-group-prepend"><icon class="fa fa-2x fa-phone"></icon></div>
                   &nbsp;
-                  <input
-                    type="text"
-                    required
-                    class="form-control"
-                    id="recipient_phone"
-                    name="recipient_phone"
-                    placeholder="+7(xxx)-xxx-xx-xx"
-                  />
+                  <input required="" class="form-control" id="recipient_phone" name="recipient_phone" placeholder="+7(xxx)-xxx-xx-xx">
                 </div>
               </div>
-              <button type="submit" class="btn btn-primary float-left">
-                Заказать звонок
-              </button>
-              <button
-                type="button"
-                class="btn btn-secondary float-right"
-                data-dismiss="modal"
-              >Закрыть
-              </button>
+              <button type="submit" class="btn btn-primary float-left">Заказать звонок</button>
+              <button type="button" class="btn btn-secondary float-right" data-dismiss="modal">Закрыть</button>
             </form>
           </div>
           <div class="modal-footer"></div>
         </div>
       </div>
     </div>
-    <!-- end call_ME MODAL WINDOW-->
-
-    <!-- order modal window-->
-    <div
-      class="modal fade"
-      id="order_modal"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="orderModalLabel"
-      aria-hidden="true"
-    >
+    <div class="modal fade" id="order_modal" tabindex="-1" role="dialog" aria-labelledby="orderModalLabel" aria-hidden="true" style="display: none;">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h4 class="modal-title" id="orderModalLabel">
-              Запросить коммерческое предложение:
-            </h4>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
+            <h4 class="modal-title" id="orderModalLabel">Запросить коммерческое предложение:</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
             </button>
           </div>
           <div class="modal-body">
             <form method="POST" action="/php/order_sendMail.php">
               <div class="form-group">
-                <label for="message-text" class="form-control-label"
-                  >Ваше имя:</label
-                >
+                <label for="message-text" class="form-control-label">Ваше имя:</label>
                 <div class="input-group mb-3">
-                  <div class="input-group-prepend">
-                    <icon class="fa fa-2x fa-user"></icon>
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-					<h4 class="modal-title" id="orderModalLabel">
-                        Получить коммерческое предложение:
-                      </h4>
-                      <button
-                        type="button"
-                        class="close"
-                        data-dismiss="modal"
-                        aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                      
-                    </div>
-                    <div class="modal-body">
-                      <form method="POST" action="/php/order_sendMail.php">
-                        
-						<div class="form-group">
-                          <label for="recipient_name" class="form-control-label"
-                            >Представьтесь пожалуйста:</label
-                          >
-						   <div class="input-group mb-3">
-						   <div class="input-group-prepend" style="margin-right:5px;">
-								<icon class="fa fa-2x fa-user-circle"></icon>
-							</div>&nbsp;
-                         <input type="text" required
-						 class="form-control" id="recipient_name" name="recipient_name" placeholder="Фамилия Имя Отчество" />
-                        </div>
-						</div>
-						
-						<div class="form-group">
-                          <label for="recipient_org" class="form-control-label"
-                            >Наименование организации:</label
-                          >
-						   <div class="input-group mb-3">
-						   <div class="input-group-prepend" style="margin-right:5px;">
-								<icon class="fa fa-2x fa-group"></icon>
-							</div>&nbsp;
-                         <input type="text" required
-						 class="form-control" id="recipient_org" name="recipient_org" placeholder="АО Союз" />
-                        </div>
-						</div>
-
-						
-                        <div class="form-group">
-                          <label for="recipient_email" class="form-control-label"
-                            >Ваш EMAIL:</label
-                          >
-						   <div class="input-group mb-3">
-						   <div class="input-group-prepend" style="margin-right:5px;">
-								<icon class="fa fa-2x fa-envelope"></icon>
-							</div>&nbsp;
-                         <input type="email" required
-						 class="form-control" id="recipient_email" name="recipient_email" placeholder="fio@company.org" />
-                        </div>
-						</div>
-						
-						
-						
-						
-						<div class="form-group">
-                          <label for="recipient-messages" class="form-control-label">Сообщение:</label>
-						  
-                          <textarea
-                            
-							required
-                            class="form-control"
-                            id="recipient-message"
-							name="recipient-message"							
-                          ></textarea>
-                        </div>
-						 <button type="submit" class="btn btn-primary float-left">
-                        Отправить
-                      </button>
-					  <button
-                        type="button"
-                        class="btn btn-secondary float-right"
-                        data-dismiss="modal">
-                        Закрыть
-                      </button>
-                      </form>
-                    </div>
-                    <div class="modal-footer">                   
-                     
-                    </div>
-
-                  </div>
+                  <div class="input-group-prepend"><icon class="fa fa-2x fa-user"></icon></div>
                   &nbsp;
-                  <input
-                    type="text"
-                    required
-                    class="form-control"
-                    id="recipient_name"
-                    name="recipient_name"
-                    placeholder="Ваше ФИО"
-                  />
-                </div>
-              </div>
-
-              <div class="form-group">
-                <label for="message-text" class="form-control-label"
-                  >Компания:</label
-                >
-                <div class="input-group mb-3">
-                  <div class="input-group-prepend">
-                    <icon class="fa fa-2x fa-building"></icon>
-                  </div>
-                  &nbsp;
-                  <input
-                    type="text"
-                    required
-                    class="form-control"
-                    id="recipient_сompany"
-                    name="recipient_сompany"
-                    placeholder="Название вашей компании"
-                  />
-                </div>
-              </div>
-
-              <div class="form-group">
-                <label for="message-text" class="form-control-label"
-                  >Ваш EMAIL:</label
-                >
-                <div class="input-group mb-3">
-                  <div class="input-group-prepend">
-                    <icon class="fa fa-2x fa-envelope"></icon>
-                  </div>
-                  &nbsp;
-                  <input
-                    type="email"
-                    required
-                    class="form-control"
-                    id="recipient_email"
-                    name="recipient_email"
-                    placeholder="fio@company.org"
-                  />
+                  <input required="" class="form-control" id="recipient_name" name="recipient_name" placeholder="Ваше ФИО">
                 </div>
               </div>
               <div class="form-group">
-                <label for="recipient-name" class="form-control-label"
-                  >Сообщение:</label
-                >
-                <textarea
-                  required
-                  class="form-control"
-                  id="recipient-message"
-                  name="recipient-message"
-                ></textarea>
+                <label for="message-text" class="form-control-label">Компания:</label>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend"><icon class="fa fa-2x fa-building"></icon></div>
+                  &nbsp;
+                  <input required="" class="form-control" id="recipient_сompany" name="recipient_сompany" placeholder="Название вашей компании">
+                </div>
               </div>
-              <button type="submit" class="btn btn-primary float-left">
-                Отправить
-              </button>
-              <button
-                type="button"
-                class="btn btn-secondary float-right"
-                data-dismiss="modal"
-              >
-                Закрыть
-              </button>
+              <div class="form-group">
+                <label for="message-text" class="form-control-label">Ваш EMAIL:</label>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend"><icon class="fa fa-2x fa-envelope"></icon></div>
+                  &nbsp;
+                  <input type="email" required="" class="form-control" id="recipient_email" name="recipient_email" placeholder="fio@company.org">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="recipient-name" class="form-control-label">Сообщение:</label>
+                <textarea required="" class="form-control" id="recipient-message" name="recipient-message"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary float-left">Отправить</button>
+              <button type="button" class="btn btn-secondary float-right" data-dismiss="modal">Закрыть</button>
             </form>
           </div>
           <div class="modal-footer"></div>
         </div>
       </div>
     </div>
-    <!-- end order modal window-->
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top nav__wrapper">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top nav__wrapper" style="">
       <div class="container">
-        <a class="navbar-brand" href="https://nziv.ru/">
-          <img
-            class="logonziv"
-            src="../../img/logonziv.png"
-            alt="АО НЗИВ логотип"
-          />
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarResponsive"
-          aria-controls="navbarResponsive"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
+        <a class="navbar-brand" href="https://nziv.ru/"><img class="logonziv" src="../../img/logonziv.png" alt="АО НЗИВ логотип"> </a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div
-          class="collapse navbar-collapse navbar__block"
-          id="navbarResponsive"
-        >
+        <div class="collapse navbar-collapse navbar__block" id="navbarResponsive">
           <ul class="navbar-nav nav-item-link">
-            <li class="nav-item active">
-              <a class="nav-link" href="/"
-                >Главная
-                <!-- <span class="sr-only">(current)</span> -->
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contacts.html">Контакты</a>
-            </li>
+            <li class="nav-item active"><a class="nav-link" href="/">Главная</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
           </ul>
           <div class="phone__block">
-            <a href="tel:+7-968-222-00-52" class="phone_link">
-              <span class="phone_number">
-                8-968-222-00-52
-              </span>
-              <i class="fa fa-whatsapp" aria-hidden="true"></i>
-            </a>
+            <a href="tel:+7-968-222-00-52" class="phone_link"><span class="phone_number">8-968-222-00-52 </span><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
           </div>
           <div class="callme__block">
             <div class="bd-example">
-              <button
-                type="button"
-                class="btn btn-danger modalbutton__callme"
-                data-toggle="modal"
-                data-target="#call_me_modal"
-                data-whatever="@mdo"
-              >
+              <button type="button" class="btn btn-danger modalbutton__callme" data-toggle="modal" data-target="#call_me_modal" data-whatever="@mdo">
                 Перезвоните мне
               </button>
             </div>
@@ -369,5 +132,4 @@
         </div>
       </div>
     </nav>
-  </body>
-</html>
+
