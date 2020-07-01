@@ -87,38 +87,36 @@
           </div>
           <div class="modal-body">
             <form method="POST" action="/php/order_sendMail.php">
-              <div class="form-group">
-                <label for="message-text" class="form-control-label">Ваше имя:</label>
                 <div class="input-group mb-3">
-                  <div class="input-group-prepend"><icon class="fa fa-2x fa-user"></icon></div>
+                  <div class="input-group-prepend" style="margin-right: 5px;">
+                    <icon class="fa fa-2x fa-user-circle"></icon>
+                  </div>
                   &nbsp;
                   <input
                     required
                     class="form-control"
                     id="recipient_name"
                     name="recipient_name"
-                    placeholder="Ваше ФИО"
+                    placeholder="Фамилия Имя Отчество"
                   />
                 </div>
               </div>
               <div class="form-group">
-                <label for="message-text" class="form-control-label">Компания:</label>
+                <label for="recipient_org" class="form-control-label">Наименование организации:</label>
                 <div class="input-group mb-3">
-                  <div class="input-group-prepend"><icon class="fa fa-2x fa-building"></icon></div>
+                  <div class="input-group-prepend" style="margin-right: 5px;">
+                    <icon class="fa fa-2x fa-group"></icon>
+                  </div>
                   &nbsp;
-                  <input
-                    required
-                    class="form-control"
-                    id="recipient_сompany"
-                    name="recipient_сompany"
-                    placeholder="Название вашей компании"
-                  />
+                  <input required class="form-control" id="recipient_org" name="recipient_org" placeholder="АО Союз" />
                 </div>
               </div>
               <div class="form-group">
-                <label for="message-text" class="form-control-label">Ваш EMAIL:</label>
+                <label for="recipient_email" class="form-control-label">Ваш EMAIL:</label>
                 <div class="input-group mb-3">
-                  <div class="input-group-prepend"><icon class="fa fa-2x fa-envelope"></icon></div>
+                  <div class="input-group-prepend" style="margin-right: 5px;">
+                    <icon class="fa fa-2x fa-envelope"></icon>
+                  </div>
                   &nbsp;
                   <input
                     type="email"
@@ -131,7 +129,6 @@
                 </div>
               </div>
               <div class="form-group">
-                <label for="recipient-name" class="form-control-label">Сообщение:</label>
                 <textarea required class="form-control" id="recipient-message" name="recipient-message"></textarea>
               </div>
               <button type="submit" class="btn btn-primary float-left">Отправить</button>
