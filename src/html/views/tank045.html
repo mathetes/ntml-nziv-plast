@@ -18,15 +18,16 @@
         <%=
         _.template(require('./../includes/tanks/tank_slider045.html').default)(data)
         %>
-      </div>
+      <%=
+        _.template(require('./../includes/modalorder.html').default)(data) %>
+</div>
       <div class="caracters__block animate__animated animate__backInRight">
         <h2 class="font-weight-light caracters__heading">
           Характеристики изделия
         </h2>
         <%=
         _.template(require('./../includes/tanks/table_tank045.html').default)(data)
-        %> <%=
-        _.template(require('./../includes/modalorder.html').default)(data) %>
+        %> 
       </div>
     </div>
   </div>

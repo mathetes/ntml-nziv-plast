@@ -1,5 +1,5 @@
-<% var data = { title: "Ведро с крышкой - 21 литр | АО НЗИВ", author: "Mathetes"
-}; %> <%= _.template(require('./../includes/header.html').default)(data) %>
+<% var data = { title: "Ведро 21 литр | АО НЗИВ", author: "Mathetes" }; %> <%=
+_.template(require('./../includes/header.html').default)(data) %>
 
 <!-- Page Content -->
 <div class="container wrapper">
@@ -13,20 +13,23 @@
         <%= _.template(require('./../includes/iconsblock.html').default)(data)
         %>
       </div>
-      <h2 class="product__heading animate__animated animate__backInDown">Ведро с крышкой - 21 литр</h2>
+      <h2 class="product__heading animate__animated animate__backInDown">
+        Ведро 21 литр
+      </h2>
       <div class="image__block animate__animated animate__backInLeft">
         <%=
         _.template(require('./../includes/buckets/bucket_slider21.html').default)(data)
         %>
-      </div>
+      <%=
+        _.template(require('./../includes/modalorder.html').default)(data) %>
+</div>
       <div class="caracters__block animate__animated animate__backInRight">
         <h2 class="font-weight-light caracters__heading">
           Характеристики изделия
         </h2>
         <%=
         _.template(require('./../includes/buckets/table_bucket21.html').default)(data)
-        %> <%=
-        _.template(require('./../includes/modalorder.html').default)(data) %>
+        %> 
       </div>
     </div>
   </div>
