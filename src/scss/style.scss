@@ -46,6 +46,13 @@ body {
 }
 .card-title {
   text-align: center;
+  color: #fff;
+  text-decoration: none;
+  &:hover {
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+  }
 }
 .card-block {
   width: 16.8rem;
@@ -127,6 +134,10 @@ body {
 }
 .product__pic {
   width: 100% !important;
+}
+
+.product-props {
+  background-color: #c82333;
 }
 
 // Icon block
