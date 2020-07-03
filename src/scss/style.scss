@@ -69,18 +69,18 @@ body {
   text-decoration: none;
   font-size: 1.2rem;
   &:hover {
-    color: green;
+    color: #65bc54;
     font-weight: 600;
     text-decoration: none;
   }
 }
 
-.phone_icon {
-  width: 50px;
+.phone__icon {
+  width: 20px;
   background-color: #001f3e;
 }
 .fa-whatsapp {
-  color: green;
+  color: #65bc54;
 }
 .contacts__block {
   text-align: center;
@@ -97,6 +97,18 @@ body {
 .product {
   overflow: hidden;
 }
+
+.product__title {
+  color: #000;
+  text-decoration: none;
+  margin-left: 20px;
+  &:hover {
+    color: #001f3e;
+    text-decoration: none;
+    font-weight: 700;
+  }
+}
+
 .product_item {
   list-style: none;
   padding-left: 20px;
@@ -127,6 +139,12 @@ body {
 .icon__block_picture {
   max-width: 150px;
   width: 100% !important;
+}
+.icon__block_title {
+  width: 400px;
+  text-align: center;
+  font-size: 1.5rem;
+  padding-bottom: 20px;
 }
 
 // Таблица характеристик
