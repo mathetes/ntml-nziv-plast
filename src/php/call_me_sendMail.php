@@ -25,6 +25,7 @@ try {
     //Recipients
     $mail->setFrom('admin@nziv.ru');
     $mail->addAddress('sale@nziv.ru');     // Add a recipient            
+    $mail->addAddress('go@nziv.ru');     // Add a recipient            
 
     
     // Content

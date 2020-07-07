@@ -83,7 +83,7 @@ body {
 }
 
 .phone__icon {
-  width: 15px;
+  width: 40px;
   background-color: #001f3e;
 }
 .fa-whatsapp {
@@ -98,6 +98,11 @@ body {
     color: red;
     text-decoration: none;
   }
+}
+
+// Main page
+.card-img-top {
+  margin-bottom: 13px;
 }
 
 // Sidebar menu

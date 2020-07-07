@@ -5,6 +5,6 @@
   <title>PHPMailer Test</title>
 </head>
 <body>
-текст на русском
+текст русском
 </body>
 </html>
