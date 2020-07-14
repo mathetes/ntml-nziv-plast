@@ -12,10 +12,12 @@ require "vendor/autoload.php";
 $mail = new PHPMailer(true);
 
 try {
+	$mail->CharSet='UTF-8';
+	$mail->Encoding = 'base64';
     //Server settings
-    $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      // Enable verbose debug output
+    #$mail->SMTPDebug = SMTP::DEBUG_SERVER;                      // Enable verbose debug output
     $mail->isSMTP();                                            // Send using SMTP
-    $mail->Host       = 'smtp.nziv.ru';                    // Set the SMTP server to send through
+    $mail->Host       = 'mail.nziv.ru';                    // Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
     $mail->Username   = 'admin@nziv.ru';                     // SMTP username
     $mail->Password   = 'Lg1257DHm5';                               // SMTP password
