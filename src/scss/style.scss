@@ -19,12 +19,9 @@ $font-stack: -apple-system, BlinkMacSystemFont, Roboto, "Open Sans",
 @import "./tables";
 @import "./slider";
 @import "./footer";
-@import "./media";
-
-// Main page
-// .card-img-top {
-//   margin-bottom: 13px;
-// }
+@import "./media992";
+@import "./media768";
+@import "./media480";
 
 // Blocks
 .image__block {
@@ -50,4 +47,9 @@ $font-stack: -apple-system, BlinkMacSystemFont, Roboto, "Open Sans",
 
 // .announcement {
 //   text-align: center;
+// }
+
+// Main page
+// .card-img-top {
+//   margin-bottom: 13px;
 // }
