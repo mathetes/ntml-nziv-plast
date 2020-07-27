@@ -1,3 +1,49 @@
 /* Landscape phones and smaller */
 @media (max-width: 480px) {
+  .wrapper {
+    margin-top: 180px;
+  }
+
+  .navbar-brand {
+    width: 100%;
+    text-align: center;
+  }
+  .nav__wrapper {
+    height: 155px;
+  }
+  .logonziv {
+    width: 15rem;
+    margin-bottom: 20px;
+  }
+
+  .nav-item-link {
+    text-transform: uppercase;
+    display: -webkit-inline-box;
+    margin-left: 0px;
+    width: 46%;
+  }
+
+  .nav-link {
+    margin-right: 15px;
+  }
+
+  .phone__block {
+    padding-top: 3px;
+    margin-left: 0;
+  }
+
+  .phone__icon {
+    width: 15px;
+  }
+  .modalbutton__callme {
+    min-width: 100px;
+    background-color: #d63944;
+  }
+  .image__block {
+    margin-right: 10px;
+  }
+
+  sidebar {
+    position: inherit;
+  }
 }

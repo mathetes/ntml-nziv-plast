@@ -1,5 +1,10 @@
 // Slider
-
+.image__block {
+  display: inline-block;
+  width: 40%;
+  float: left;
+  margin-right: 30px;
+}
 /* ----> wrapper */
 #content-slider .wrap-slider {
   max-width: 450px;
