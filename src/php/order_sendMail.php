@@ -1,12 +1,14 @@
 <?PHP
+
+
 // Import PHPMailer classes into the global namespace
 // These must be at the top of your script, not inside a function
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
-
 require "vendor/autoload.php";
+
 
 // Instantiation and passing `true` enables exceptions
 $mail = new PHPMailer(true);
@@ -36,7 +38,11 @@ try {
     $mail->Body    = 
     'ФИО: '.$_POST['recipient-name'].',Компания: '.$_POST['recipient-сompany'].',EMAIL: '.$_POST['recipient-email'].', Сообщение: '.$_POST['recipient-message'];
     $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
-
+	if (isset($_FILES['recipient-file']) &&
+    $_FILES['recipient-file']['error'] == UPLOAD_ERR_OK) {
+    $mail->AddAttachment($_FILES['recipient-file']['tmp_name'],
+                         $_FILES['recipient-file']['name']);
+}
     $mail->send();
     header('location:/order_sended.html');
 } catch (Exception $e) {

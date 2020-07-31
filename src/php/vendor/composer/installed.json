@@ -6,12 +6,12 @@
         "source": {
             "type": "git",
             "url": "https://github.com/PHPMailer/PHPMailer.git",
-            "reference": "21a6071ac30715eb9e38139e659089d3e8f45434"
+            "reference": "90871378de07465e42551f51052d47ce45a6003c"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/21a6071ac30715eb9e38139e659089d3e8f45434",
-            "reference": "21a6071ac30715eb9e38139e659089d3e8f45434",
+            "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/90871378de07465e42551f51052d47ce45a6003c",
+            "reference": "90871378de07465e42551f51052d47ce45a6003c",
             "shasum": ""
         },
         "require": {
@@ -32,7 +32,7 @@
             "stevenmaguire/oauth2-microsoft": "Needed for Microsoft XOAUTH2 authentication",
             "symfony/polyfill-mbstring": "To support UTF-8 if the Mbstring PHP extension is not enabled (^1.2)"
         },
-        "time": "2020-06-20T10:39:58+00:00",
+        "time": "2020-07-20T09:31:22+00:00",
         "type": "library",
         "installation-source": "source",
         "autoload": {
@@ -61,6 +61,12 @@
                 "name": "Brent R. Matzelle"
             }
         ],
-        "description": "PHPMailer is a full-featured email creation and transfer class for PHP"
+        "description": "PHPMailer is a full-featured email creation and transfer class for PHP",
+        "funding": [
+            {
+                "url": "https://github.com/synchro",
+                "type": "github"
+            }
+        ]
     }
 ]
