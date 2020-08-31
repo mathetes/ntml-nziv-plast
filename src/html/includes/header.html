@@ -188,7 +188,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     class="form-control"
                     id="recipient-phone"
                     name="recipient-phone"
-                    placeholder="не обязательно"
+                    placeholder="+7(999)-999-99-99"
                   />
                 </div>
               </div>
@@ -337,7 +337,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			dataLayer.push({'event': 'order'});
 		}		
 		window.onload=function(){
-			var im = new Inputmask("(999)-999-99-99");
+			var im = new Inputmask("\\+\\7(999)-999-99-99");
 			im.mask(document.getElementById("recipient_phone"));
 			im.mask(document.getElementById("recipient-phone"));
 		}
