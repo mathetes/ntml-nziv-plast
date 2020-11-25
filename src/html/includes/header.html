@@ -1,26 +1,49 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+      (function (m, e, t, r, i, k, a) {
+        m[i] =
+          m[i] ||
+          function () {
+            (m[i].a = m[i].a || []).push(arguments);
+          };
+        m[i].l = 1 * new Date();
+        (k = e.createElement(t)),
+          (a = e.getElementsByTagName(t)[0]),
+          (k.async = 1),
+          (k.src = r),
+          a.parentNode.insertBefore(k, a);
+      })(
+        window,
+        document,
+        "script",
+        "https://mc.yandex.ru/metrika/tag.js",
+        "ym"
+      );
+
+      ym(68362411, "init", {
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true,
+        webvisor: true,
+      });
+    </script>
+    <noscript
+      ><div>
+        <img
+          src="https://mc.yandex.ru/watch/68362411"
+          style="position: absolute; left: -9999px;"
+          alt=""
+        /></div
+    ></noscript>
+    <!-- /Yandex.Metrika counter -->
     <meta charset="utf-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-
-    <!-- Google Tag Manager -->
-    <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-NK4L7T6");
-    </script>
-    <!-- End Google Tag Manager -->
 
     <link rel="shortcut icon" href="favicon/favicon.ico" />
     <link
@@ -42,16 +65,6 @@
     <title><%=title%></title>
   </head>
   <body cz-shortcut-listen="true">
-    <!-- Google Tag Manager (noscript) -->
-    <noscript
-      ><iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-NK4L7T6"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden;"
-      ></iframe
-    ></noscript>
-    <!-- End Google Tag Manager (noscript) -->
     <div
       class="modal fade"
       id="call_me_modal"
@@ -83,7 +96,7 @@
             >
               <div class="form-group">
                 <label for="recipient-name" class="form-control-label"
-                  >Представьтесь пожалуйста:</label
+                  >Представьтесь, пожалуйста:</label
                 >
                 <div class="input-group mb-3">
                   <div class="input-group-prepend">
@@ -117,7 +130,11 @@
                   />
                 </div>
               </div>
-              <button type="submit" class="btn btn-primary float-left">
+              <button
+                type="submit"
+                class="btn btn-primary float-left"
+                onclick="ym(68362411,'reachGoal','callback'); return true;"
+              >
                 Заказать звонок
               </button>
               <button
@@ -166,7 +183,7 @@
             >
               <div class="form-group">
                 <label for="message-text" class="form-control-label"
-                  >Ваше имя (*):</label
+                  >Имя (*):</label
                 >
                 <div class="input-group mb-3">
                   <div class="input-group-prepend">
@@ -178,7 +195,7 @@
                     class="form-control"
                     id="recipient-name"
                     name="recipient-name"
-                    placeholder="Ваше ФИО"
+                    placeholder="Пожалуйста, укажите ФИО"
                   />
                 </div>
               </div>
@@ -196,7 +213,7 @@
                     class="form-control"
                     id="recipient-сompany"
                     name="recipient-сompany"
-                    placeholder="Название вашей компании"
+                    placeholder="Пожалуйста, укажите название компании"
                   />
                 </div>
               </div>
@@ -217,13 +234,13 @@
                     class="form-control"
                     id="recipient-phone"
                     name="recipient-phone"
-                    placeholder="+7(999)-999-99-99"
+                    placeholder="+7(999) 999-99-99"
                   />
                 </div>
               </div>
               <div class="form-group">
                 <label for="message-text" class="form-control-label"
-                  >Ваш EMAIL (*):</label
+                  >E-mail (*):</label
                 >
                 <div class="input-group mb-3">
                   <div class="input-group-prepend">
@@ -274,7 +291,11 @@
                   />
                 </div>
               </div>
-              <button type="submit" class="btn btn-primary float-left">
+              <button
+                type="submit"
+                class="btn btn-primary float-left"
+                onclick="ym(68362411,'reachGoal','commercial'); return true;"
+              >
                 Отправить
               </button>
               <button
@@ -317,10 +338,16 @@
             </li>
           </ul>
           <div class="phone__block">
-            <a href="tel:+7-968-222-00-52" class="phone_link"
+            <a
+              href="tel:+7-968-222-00-52"
+              class="phone_link"
+              onclick="ym(68362411,'reachGoal','phone'); return true;"
               ><span class="phone_number">8-968-222-00-52 </span></a
             >
-            <a href="https://wa.me/79682220052">
+            <a
+              href="https://wa.me/79682220052"
+              onclick="ym(68362411,'reachGoal','target_whatsapp'); return true;"
+            >
               <img
                 class="phone__icon"
                 src="./../../img/whatsapp.png"
@@ -329,6 +356,7 @@
             </a>
             <a
               href="tg://msg?text=<?php echo urlencode( '<TEXT>' ); ?>&to=<PHONE>"
+              onclick="ym(68362411,'reachGoal','target_telegram'); return true;"
             >
               <img
                 class="phone__icon"
